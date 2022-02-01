@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navbar</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- navbar start -->
+        <nav class="container">
+            <div class="navleft">
+                <a class="logo" href="#"><img src="icccm_logo_new.png" alt="">
+                <span>ISCCM</span></a>
+            </div>
+
+            <div class="navright">
+                <ul class="menu">
+                    <li><a href="#">Membership</a>
+                    <div class="dropdown">
+                      <ul class="left">
+                          <li>Become ISCCM member <i class="fa fa-arrow-right"></i></li>
+                          <li><a href="#">Membership Benefits</a></li>
+                          <li><a href="#">Apply Online</a></li>
+                          <li><a href="#">Membership status</a></li>
+                          <li><a href="#">New Member List</a></li>
+                          <li><a href="#">Incomplete members Data</a></li>
+                      </ul>
+
+                      <ul class="right">
+                        <li>Services for ISCCM member <i class="fa fa-arrow-right"></i></li>
+                        <li><a href="#">Changes of Contact Details </a></li>
+                        <li><a href="#">Print Confirmation Letter</a></li>
+                        <li><a href="#">Download E-ID Card </a></li>
+                        <li><a href="#">Apply for ID Card </a></li>
+                        <li><a href="#">Print Certificate</a></li>
+                        <li><a href="#">Online Payment </a></li>
+                        <li><a href="#">Professional Indemnity Scheme</a></li>
+                        <li><a href="#">27th Annual Report</a></li>
+                    </ul>
+                    </div>
+                    </li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">News & Events</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Society</a></li>
+                </ul>
+                <div class="topside">
+                    <div class="topsideinner">
+                     <input type="search" placeholder="Search">
+                     <ul>
+                         <li>Home</li>
+                         <li>Login</li>
+                         <li>Contact</li>
+                     </ul> 
+                    </div>  
+                 </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+        <i class="fa fa-bars" onclick="togglenav()"></i>
+    </header>
+    <script>
+        //toggle navbar
+        let menu=document.querySelector(".menu")
+        function togglenav() {
+            menu.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
