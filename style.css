@@ -29,6 +29,7 @@ header{
     height: 100px;
     position: fixed;
     box-shadow: 2px 5px 5px 0px #a39b90;
+    z-index: 1;
 }
 
 
@@ -138,7 +139,7 @@ header .menu li a:hover{
 
 header .menu .dropdown{
     position: absolute;
-    bottom: -314px;
+    bottom: -312px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgb(255, 255, 255);
@@ -162,11 +163,27 @@ header .menu .dropdown ul li{
     margin-bottom: 3px;
     padding-bottom: 0px;
     height: auto;
+    position: relative;
+    width: auto;
 
 }
 
+header .menu .dropdown ul li::before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    transition: 0.5s;
+    height: 2px;
+    background-color: #b43d3f;
+    bottom: 0px;
+}
 
-header .menu .dropdown ul li i{
+header .menu .dropdown ul li:hover::before{
+    width: 100%;
+}
+
+
+header .menu .dropdown ul span i{
     background-color: #b43d3f;
     color: white;
     padding:3px 5px;
@@ -181,7 +198,7 @@ header .menu .dropdown ul li:hover a{
 }
 
 
-header .menu .dropdown ul li:nth-child(1){
+header .menu .dropdown ul span{
     font-weight: bold;
     margin-left: -5px;
 }
@@ -252,9 +269,6 @@ header .homelogin{
         overflow-x: hidden;
     }
 
-    header .homelogin{
-        display: block;
-    }
 
     header .homelogin li{
         color: white;
@@ -309,6 +323,7 @@ header .homelogin{
         width: 100%;
         transform: translateX(0%);
         border: none;
+        margin: auto!important;
     }
 
     nav .menu .dropdown ul li a{
@@ -330,6 +345,10 @@ header .homelogin{
 @media(max-width:578px){
     header .topside ul{
        display: none;
+    }
+
+    header .homelogin{
+        display: block;
     }
 
     header .topside{
