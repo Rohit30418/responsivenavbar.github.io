@@ -179,7 +179,7 @@ header .menu li a:hover{
 /* style bar */
 .fa-bars{
     position: absolute;
-    right: 10px;
+    right: 15px;
     bottom: 15px;
     font-size: 25px;
     display: none;
@@ -277,6 +277,10 @@ header .menu li a:hover{
 
     nav .menu .dropdown ul li a{
         color: black;
+    }
+
+    header .menu .dropdown .right{
+        margin-left: 0px;
     }
 }
 
