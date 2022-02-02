@@ -337,6 +337,10 @@ header .homelogin{
         margin: auto!important;
     }
 
+    header .menu .dropdown ul li::before{
+        display: none;
+    }
+
     nav .menu .dropdown ul li a{
         color: black;
     }
