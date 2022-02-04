@@ -9,9 +9,26 @@
     font-family: 'Mukta', sans-serif;
 }
 
+.carousel-control-next, .carousel-control-prev{
+    top: 50%;
+    bottom: 50%;
+    height: 50px;
+    width: 100px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: #2a67b5;
+    width: 20px;
+    height: 20px;
+    color: white;
+    border-radius: 50%;
+    padding: 10px !important;
+} 
+
 html{
     padding: 0px;
     margin: 0px;
+    overflow-x: hidden;
 
 }
 
@@ -27,14 +44,13 @@ body{
 header{
     width: 100%;
     height: 100px;
-    position: fixed;
-    box-shadow: 2px 5px 5px 0px #a39b90;
+    position: relative;
     z-index: 1;
 }
 
 
 header .topside{
-    background-color: #b43d3f;
+    background-color: #2a67b5;
     width: 45%;
     margin-left: auto;
     padding: 5px 5px 5px 50px;
@@ -49,6 +65,7 @@ header .topside .topsideinner{
     align-items: center;
     transform: skewX(-30deg);
 }
+
 
 header .topside input{
     border: 2px solid white;
@@ -65,11 +82,14 @@ header .topside input::placeholder{
     color: white;
     padding-left: 10px;
     font-weight: bold;
+    font-size: 14px;
 }
 
 header .topside ul{
-    display: flex;
-   
+    display:flex;
+    align-items: center !important;
+    margin-bottom: 0px!important;
+    
 }
 
 header .topside ul li{
@@ -78,6 +98,7 @@ header .topside ul li{
     color:white;
     cursor: pointer;
     height: 100%;
+    font-size: 14px;
 }
 /* styling navbar */
 header nav{
@@ -117,15 +138,17 @@ header .menu{
     bottom: 0px;
     transform: translateX(-50%);
     display: flex;
+    margin-bottom: 0px!important;
 }
 
 header .menu li{
     list-style: none;
     margin: 0px 10px;
     padding-bottom: 5px;
-    font-weight: bold;
+    font-weight:bold;
     color: black;
     cursor: pointer;
+    font-size: 18px;
 }
 
 header .menu  li a{
@@ -135,18 +158,18 @@ header .menu  li a{
 }
 
 header .menu li a:hover{
-    color: #b43d3f;
+    color: #2a67b5;
 }
 
 /* styling dropdown */
 
 header .menu .dropdown{
     position: absolute;
-    bottom: -312px;
+    bottom: -264px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgb(255, 255, 255);
-    border: 2px solid #b43d3f;
+    border: 2px solid #2a67b5;
     width: 900px;
     padding: 20px;
     border-radius: 5px;
@@ -168,26 +191,12 @@ header .menu .dropdown ul li{
     height: auto;
     position: relative;
     width: auto;
+    font-size: 14px;
 
 }
-
-header .menu .dropdown ul li::before{
-    content: "";
-    position: absolute;
-    width: 0px;
-    transition: 0.5s;
-    height: 2px;
-    background-color: #b43d3f;
-    bottom: 0px;
-}
-
-header .menu .dropdown ul li:hover::before{
-    width: 100%;
-}
-
 
 header .menu .dropdown ul span i{
-    background-color: #b43d3f;
+    background-color: #2a67b5;
     color: white;
     padding:3px 5px;
 }
@@ -197,7 +206,7 @@ header .menu .dropdown ul li a{
 }
 
 header .menu .dropdown ul li:hover a{
-    color: #b43d3f;
+    color: #2a67b5;
 }
 
 
@@ -221,15 +230,291 @@ header .homelogin{
 }
 
 .fa-bars:hover{
-    color: #b43d3f;
+    color: #2a67b5;
 }
 
-/* style container */
-.container{
-    margin: auto;
-    padding: 0px 15px;
+
+/* style slider */
+
+.slider{
+    width: 100%;
+    overflow-x: hidden;
 }
 
+
+.carousel-inner{
+
+    height: 100%;
+
+}
+
+.carousel .carousel-item{
+    width: 100%;
+    height: 100%;   
+    min-height: 50vh;
+    height: 85vh;
+}
+.sliderinneritem1{
+    background-image: url("images/Banner/slider1(a).jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+}
+
+.sliderinneritem1 h2{
+    margin: 0px!important;
+}
+
+.sliderinneritem1 p{ 
+    margin: 0px !important;
+    font-size: 23px;
+    max-width: 300px;
+    font-weight: normal;
+}
+
+.sliderinneritem1 small{ 
+    margin: 0px !important;
+    font-size: 16px;
+    font-weight: bold;
+    color: #5e5e5e;
+}
+
+.sliderinneritem1 .left-item{
+    z-index: 3;
+    margin-left: auto;
+    position: absolute;
+    margin: 0px 100px;
+}
+
+.sliderinneritem1 .right-item{
+   display: flex;
+   justify-self: flex-end;
+   position: relative;
+   width: 63%;
+   height: 100%;
+   margin-left: auto;
+   position: relative;
+}
+
+
+.sliderinneritem1 .right-item img{
+    width: 100%;
+    height: 100%;
+}
+
+.sliderinneritem1 button{
+    background-color: #b43d3f;
+    color: white;
+    font-size: 14px;
+    border-radius: 15px;
+    padding: 3px 5px;
+    width: 150px;
+    border: none;
+    cursor: pointer;
+    margin:15px 0px;
+}
+
+.sliderinneritem1 button:hover{
+    background-color: #4b0027;
+}
+
+.sliderinneritem1 .btngroup button:nth-child(2){
+    margin-left: 10px;
+}
+
+.carousel .carousel-control-prev{
+    background-color: #2a67b5 !important;
+    top:5px !important;
+    bottom: auto!important;
+}
+
+.carousel .item2 .carousel-caption{
+max-width: 500px;
+top:0px;
+text-align: start;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+.carousel .item2 img{
+    width: 100%!important;
+    height: 100%!important;
+    object-fit: cover!important;
+}
+
+.carousel .item2 h2{
+font-size: 50px;
+font-weight: bold;
+}
+
+.carousel .item2 button{
+    background-color: #d99a3d;
+    max-width: 150px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.carousel .item2 button:hover{
+    background-color:#ff0000;
+}
+
+/* style caraousel item3 */
+.carousel .item3 .carousel-caption{
+    max-width: 500px;
+    top:0px;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+    .carousel .item3 h2{
+        font-size: 50px;
+        font-weight: bold;
+        color: black;
+        }
+
+        .carousel .item3 h2 span{
+            font-size: 50px;
+            font-weight: bold;
+            color: #303c4b;
+            margin: 0px!important;
+            padding: 0px!important;
+            }
+
+            .carousel .item3 p{
+                font-size: 28px;
+                color: black;
+                margin: 0px!important;
+            }
+
+            .carousel .item3 button{
+                background-color: #d99a3d;
+                max-width: 150px;
+                font-size: 20px;
+                border: none;
+                border-radius: 15px;
+                padding: 5px 10px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+            .carousel .item3 button:hover{
+                background-color:#ff0000;
+            }
+
+            .carousel .item3 .slideimg{
+                width: 100%!important;
+                height: 100%!important;
+                object-fit: cover;
+            }
+               
+    /* style carousel item4 */
+
+    .carousel .item4 .carousel-caption{
+        bottom: 0px;
+        top: 0px;
+    }
+
+    .carousel .item4{
+        background-color: #f1f1f1;
+    }
+
+    .carousel .item4 button{
+        background-color: #ffb500;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: none;
+        border-radius: 15px;
+        padding: 3px 15px;
+    }
+
+    .carousel .item4 img{
+        width: 100% !important;
+          }
+
+
+     /* style carousel item5 */
+
+     .carousel .item5 .carousel-caption{
+        bottom: 0px;
+        top: 0px;
+        
+        
+      
+    }
+
+    .carousel .item5 .carousel-caption .caption{
+        position: absolute;
+        text-align: start;
+        left: 300px;
+        top:50%;
+        transform: translateY(-50%);
+    }
+
+    .carousel .item5 .carousel-caption img{
+        position: absolute;
+        bottom: 0px;
+        left: 0px; 
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .carousel .item5 .slideimg{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel .item5 .topimg{
+        position: absolute;
+        top: 0px;
+    }
+
+    .carousel .item5 button{
+        border: none;
+        border-radius: 15px;
+        font-size: 16px;
+        padding: 3px 20px;
+        width: 150px;
+        background-color: #2a67b5;
+        color: white;
+        margin-left: 15px;
+    }
+
+    .carousel .item5 button:hover{
+        background-color: #4b0027;
+    }
+
+    .carousel .item5 h3{
+        font-size: 39px;
+    }
+
+    .carousel .item5 h2{
+        font-size: 49px;
+        margin-left: 5px;
+        font-weight: 500;
+    }
+
+    .carousel .item5 .bottomtxt{
+        color: #ffb500;
+        margin-left: 10px;
+        font-weight: 500;
+    }
 
 @media (min-width:992px){
     .container{
@@ -243,7 +528,7 @@ header .homelogin{
 }
 
 /* css for responsive navbar */
-@media(max-width:992px){
+@media(max-width:1010px){
     header .fa-bars{
         display: block;
     }
@@ -262,7 +547,7 @@ header .homelogin{
         top:100px;
         bottom: 0px;
         flex-direction: column;
-        background-color: #b43d3f;
+        background-color: #2a67b5;
         transform: translateX(0%);
         box-shadow: 2px 5px 5px 0px #a39b90;
         width: 300px;
@@ -280,9 +565,6 @@ header .homelogin{
         transition: 0.5s;
     }
 
-    header .homelogin li:hover{
-        padding-left: 5px;
-    }
 
     header .topside input{
     width: 200px;
@@ -309,23 +591,19 @@ header .homelogin{
 
     nav .menu li{
         border-bottom: 1px solid white;
-        width: 100%;
         padding: 10px 0px;
         cursor: pointer;
         color: white;
         transition: 0.5s;
     }
 
-    nav .menu li:hover{
-        padding-left: 5px;
-    }
 
     nav .menu li a{
         color: white;
     }
 
     nav .menu li:hover a{
-        color: white;
+        color: #ffffff;
     }
 
     nav .menu .dropdown{
@@ -334,7 +612,6 @@ header .homelogin{
         width: 100%;
         transform: translateX(0%);
         border: none;
-        margin: auto!important;
     }
 
     header .menu .dropdown ul li::before{
@@ -348,16 +625,75 @@ header .homelogin{
     header .menu .dropdown .right{
         margin-left: 0px;
     }
+
+    .sliderinneritem1 .left-item{
+        width: 100%;
+        margin: 0px 15px;
+        color: #ffffff;
+        background-color: rgba(0,0,0,0.8);
+        top:0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px 15px 0px 100px;
+    }
+
+    .sliderinneritem1 .right-item{
+        width: 100%;
+     }
+
+     .carousel .item5 .carousel-caption .caption{
+         left: 0px;
+         background-color: rgba(0,0,0,0.8);
+         width: 100%;
+         height: 100%;
+     }
+
+     .carousel .item5 .carousel-caption{
+         left: 0px;
+         right: 0px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         bottom: 0px;
+     }
 }
+
+@media(max-width:768px){
+
+    .carousel-item{
+        max-height: 100vh;
+    }
+   
+
+
+     .sliderinneritem1 .right-item img{
+         object-fit: cover;
+     }
+
+
+}
+
+
 
 @media(max-width:675px){
     header .topside{
         width: 80%;
     }
 
+
 }
 
 @media(max-width:578px){
+
+    header .topside{
+        padding: 5px 5px 5px 15px;
+    }
     header .topside ul{
        display: none;
     }
@@ -366,13 +702,14 @@ header .homelogin{
         display: block;
     }
 
+
     header .topside{
         right: -10px;
     }
     header .topside input{
         width: 100%;
         max-width: 300px;
-        margin-left: auto;
+        margin:auto;
     }
     
     nav .menu{
@@ -380,5 +717,24 @@ header .homelogin{
         transition: 0.5s;
     }
 
+    .carousel .item3 .carousel-caption{
+        width: 100%;
+        margin: 0px;
+        max-width: auto;
+        left: 0px;
+        padding: 0px 15px;
+    }
+
+    .carousel .item2 .carousel-caption{
+        width: 100%;
+        margin: 0px;
+        max-width: auto;
+        left: 0px;
+        padding: 0px 15px;
+    }
+
+    .sliderinneritem1 .left-item{
+        padding: 0px 15px 0px 15px;
+    }
     
 }

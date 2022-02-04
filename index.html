@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive navbar</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -70,6 +71,81 @@
         <!-- navbar end -->
         <i class="fa fa-bars" onclick="togglenav()"></i>
     </header>
+    <section class="slider">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+               <div class="sliderinneritem1">
+                <div class=" left-item">
+                   <div>
+                       <h2 style="font-weight: bold;">CRITICARE 2022 <span style="color: #4c0027; font-size: 27px;">Ahmedabad</span></h2>
+                       <p>28th Annual Confrence of Indian Society of critical care</p>
+                       <small>New normal, New Frontiers, New direction</small>
+                       <div class="btngroup">
+                           <button>Register</button>
+                           <button>Know more</button>
+                       </div>
+                   </div>
+                </div>
+
+                <div class="right-item">
+                    <img class="d-block w-100" src="images/Banner/slider1.png" alt="First slide">
+                </div>
+               </div>
+              </div>
+              <div class="carousel-item item2">
+                <img class="d-block w-100" src="images/Banner/slider2.png" alt="Second slide">
+                <div class="carousel-caption">
+                    <h2>Our vision is to improve criticare Medicion </h2>
+                    <Button>Know More</Button>
+                </div>
+              </div>
+              <div class="carousel-item item3">
+                <img class="d-block w-100 slideimg" src="images/Banner/slider3.png" alt="Third slide">
+                <div class="carousel-caption">
+                    <div style="max-width: 250px;" class="text-center"><img src="images/Banner/Layer3(a).png" alt=""></div>
+                    <h2>Connect with</h2>
+                    <h2><span>14,000+ Professionals</span></h2>
+                    <p>in the filed of</p>
+                    <p>Critical Care Medicine</p>
+                    <Button>Connect today</Button>
+                </div>
+              </div>
+
+              <div class="carousel-item item4">
+                <img class="d-block w-100" src="images/Banner/slider4.png" alt="forth slide">
+              <div class="carousel-caption">
+                  <button>Register</button>
+              </div>
+            </div>
+
+              <div class="carousel-item item5">
+                 <img class="topimg w-100" src="images/Banner/slider5(a).png" alt=""> 
+                <img class="d-block w-100 slideimg" src="images/Banner/slider5.png" alt="fift slide">
+                <div class="carousel-caption d-flex">
+                    <img src="images/Banner/slider5(b).png" alt="">
+                    <div class="caption">
+                        <h3>ISCCM Proudly announces</h3>
+                        <h2>IDCCM for overseas candidates</h2>
+                        <h3 class="bottomtxt">Registrations open now</h3>
+                        <button>Register</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <a  class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </section>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script>
         //toggle navbar
         let menu=document.querySelector(".menu")
