@@ -1,19 +1,13 @@
-/* google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Bakbak+One&family=Courgette&family=DM+Serif+Display&family=Kanit:wght@200&family=Libre+Baskerville:wght@700&family=Mochiy+Pop+P+One&family=Mukta:wght@300;400&family=Open+Sans:ital,wght@0,300;1,300&family=Oswald:wght@200&family=Outfit:wght@200;400&family=PT+Serif:wght@700&family=Playfair+Display+SC&family=Playfair+Display:wght@500&family=Roboto+Slab:wght@400;500&family=Roboto:wght@300&family=Rubik:wght@300&family=Shippori+Antique+B1&family=Ubuntu+Mono&family=Yanone+Kaffeesatz:wght@300&family=Yellowtail&display=swap');
 
 /* resetting padding margin */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Mukta', sans-serif;
 }
 
 .carousel-control-next, .carousel-control-prev{
-    top: 50%;
-    bottom: 50%;
-    height: 50px;
-    width: 100px;
+ 
 }
 
 .carousel-control-next-icon, .carousel-control-prev-icon{
@@ -23,12 +17,13 @@
     color: white;
     border-radius: 50%;
     padding: 10px !important;
+    top: 0px;
 } 
 
 html{
     padding: 0px;
     margin: 0px;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 
 }
 
@@ -44,8 +39,13 @@ body{
 header{
     width: 100%;
     height: 100px;
-    position: relative;
+    position: fixed;
+    background-color: white;
     z-index: 1;
+}
+
+header.addshadow{
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0,0.5);
 }
 
 
@@ -53,7 +53,7 @@ header .topside{
     background-color: #2a67b5;
     width: 45%;
     margin-left: auto;
-    padding: 5px 5px 5px 50px;
+    padding: 6px 5px 12px 50px;
     transform: skewX(30deg);
     position: absolute;
     right: -20px;
@@ -71,16 +71,23 @@ header .topside input{
     border: 2px solid white;
     border-radius: 15px;
     background-color: transparent;
-    padding: 0px 5px;
+    padding: 0px 5px 5px 5px;
     color: white;
     width: 100%;
-    max-width: 150px;
+    height: 25px;
+    max-width: 132px;
     outline: none;
+}
+
+header .topside input:focus{
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color:#4b0027;
 }
 
 header .topside input::placeholder{
     color: white;
-    padding-left: 10px;
+    padding-left: 12px;
     font-weight: bold;
     font-size: 14px;
 }
@@ -94,7 +101,7 @@ header .topside ul{
 
 header .topside ul li{
     list-style: none;
-    margin: 0px 10px;
+    margin-left: 13px;
     color:white;
     cursor: pointer;
     height: 100%;
@@ -107,9 +114,6 @@ header nav{
      align-items: center;
 }
 
-header .navleft{
-    width: 20%;
-}
 header .navleft .logo{
     text-decoration: none;
     display: flex;
@@ -118,6 +122,7 @@ header .navleft .logo{
     align-items: center;
     color: black;
     font-weight: bold;
+    padding-top:4px;
 }
 
 
@@ -145,7 +150,7 @@ header .menu li{
     list-style: none;
     margin: 0px 10px;
     padding-bottom: 5px;
-    font-weight:bold;
+    font-family: 'poppins';
     color: black;
     cursor: pointer;
     font-size: 18px;
@@ -154,7 +159,6 @@ header .menu li{
 header .menu  li a{
     text-decoration: none;
     color: black;
-    font-weight: bold;
 }
 
 header .menu li a:hover{
@@ -170,7 +174,7 @@ header .menu .dropdown{
     transform: translateX(-50%);
     background-color: rgb(255, 255, 255);
     border: 2px solid #2a67b5;
-    width: 900px;
+    width: 928px;
     padding: 20px;
     border-radius: 5px;
     display: none;
@@ -239,34 +243,44 @@ header .homelogin{
 .slider{
     width: 100%;
     overflow-x: hidden;
+    padding-top: 100px;
 }
 
 
 .carousel-inner{
-
     height: 100%;
-
 }
 
 .carousel .carousel-item{
     width: 100%;
     height: 100%;   
     min-height: 50vh;
-    height: 85vh;
+    height:calc(100vh - 100px);
 }
 .sliderinneritem1{
-    background-image: url("images/Banner/slider1(a).jpg");
-    background-position: center;
-    background-size:cover;
-    background-repeat: no-repeat;
+    background-image:url('images/Banner/slider1(a).jpg');
     display: flex;
     width: 100%;
     align-items: center;
     height: 100%;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position: relative;
+}
+
+.sliderinneritem1 .cover{
+    background-color:rgba(0, 0, 0,0.5) ;
+    top:0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1;
+    position: absolute;
 }
 
 .sliderinneritem1 h2{
-    margin: 0px!important;
+    margin-bottom: 12px!important;
+    color: rgb(255, 255, 255);
 }
 
 .sliderinneritem1 p{ 
@@ -274,57 +288,90 @@ header .homelogin{
     font-size: 23px;
     max-width: 300px;
     font-weight: normal;
+    color: rgb(255, 255, 255);
 }
 
 .sliderinneritem1 small{ 
-    margin: 0px !important;
+    margin-top: 9px!important;
     font-size: 16px;
     font-weight: bold;
-    color: #5e5e5e;
+    color: #b3b3b3;
 }
 
-.sliderinneritem1 .left-item{
-    z-index: 3;
-    margin-left: auto;
-    position: absolute;
-    margin: 0px 100px;
+
+
+.sliderinneritem1 .left-item .topimage{
+    position: relative;
+    text-align: center;
+    max-width: 280px;
+    margin-bottom: 27px;
 }
+
+.sliderinneritem1 .left-item .topimage img:nth-child(1){
+  width:125px;
+  height: 124px;
+}
+
+.sliderinneritem1 .left-item .topimage img:nth-child(2){
+   position: absolute;
+   top:23px;
+   left: 50%;
+   transform: translateX(-50%);
+  }
+
+
+
+
 
 .sliderinneritem1 .right-item{
    display: flex;
    justify-self: flex-end;
-   position: relative;
-   width: 63%;
-   height: 100%;
-   margin-left: auto;
-   position: relative;
+   position: absolute;
+   top: 0px;
+   width: 100%;
+   height: 100vh;
+  
+}
+
+.sliderinneritem1 .carousel-caption{
+    text-align: start;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    z-index: 1;
 }
 
 
 .sliderinneritem1 .right-item img{
-    width: 100%;
+    width: 100%; 
     height: 100%;
+    object-fit: cover;
 }
 
 .sliderinneritem1 button{
     background-color: #b43d3f;
     color: white;
     font-size: 14px;
-    border-radius: 15px;
-    padding: 3px 5px;
-    width: 150px;
+    border-radius: 20px;
+    padding: 7px 45px 8px 42px;
+    width: 148px;
     border: none;
     cursor: pointer;
-    margin:15px 0px;
+    margin:23px 0px;
+    height: 34px;
+}
+
+.sliderinneritem1 button:nth-child(2){
+    padding: 7px 31px 8px 33px;
+    margin-left: 17px;
 }
 
 .sliderinneritem1 button:hover{
     background-color: #4b0027;
 }
 
-.sliderinneritem1 .btngroup button:nth-child(2){
-    margin-left: 10px;
-}
+
 
 .carousel .carousel-control-prev{
     background-color: #2a67b5 !important;
@@ -333,12 +380,13 @@ header .homelogin{
 }
 
 .carousel .item2 .carousel-caption{
-max-width: 500px;
-top:0px;
-text-align: start;
-display: flex;
-justify-content: center;
-flex-direction: column;
+    top: 0px;
+    text-align: start;
+    max-width:500px ;
+    left: -250px!important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .carousel .item2 img{
@@ -354,12 +402,14 @@ font-weight: bold;
 
 .carousel .item2 button{
     background-color: #d99a3d;
-    max-width: 150px;
+    width: 173px;
+    height: 53px;
     font-size: 20px;
     border: none;
-    border-radius: 15px;
-    padding: 5px 10px;
+    border-radius: 20px;
+    padding: 12px 34px 13px 28px;
     cursor: pointer;
+    margin-top: 24px;
 }
 
 .carousel .item2 button:hover{
@@ -368,12 +418,13 @@ font-weight: bold;
 
 /* style caraousel item3 */
 .carousel .item3 .carousel-caption{
-    max-width: 500px;
+    max-width: 550px;
     top:0px;
     text-align: start;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    left: -200px;
     }
 
     .carousel .item3 h2{
@@ -398,13 +449,14 @@ font-weight: bold;
 
             .carousel .item3 button{
                 background-color: #d99a3d;
-                max-width: 150px;
+                max-width: 221px;
+                height: 53px;
                 font-size: 20px;
                 border: none;
-                border-radius: 15px;
-                padding: 5px 10px;
+                border-radius: 20px;
+                padding: 5px 30px;
                 cursor: pointer;
-                margin-top: 10px;
+                margin-top: 28px;
             }
 
             .carousel .item3 button:hover{
@@ -435,12 +487,18 @@ font-weight: bold;
         font-weight: bold;
         cursor: pointer;
         position: absolute;
-        top: 70%;
+        bottom: 5px;
         left: 50%;
         transform: translateX(-50%);
         border: none;
-        border-radius: 15px;
+        border-radius: 20px;
         padding: 3px 15px;
+        width: 155px;
+        height: 42px;
+    }
+
+    .carousel .item4 button:hover{
+        background-color: #4b0027;
     }
 
     .carousel .item4 img{
@@ -453,9 +511,6 @@ font-weight: bold;
      .carousel .item5 .carousel-caption{
         bottom: 0px;
         top: 0px;
-        
-        
-      
     }
 
     .carousel .item5 .carousel-caption .caption{
@@ -464,6 +519,9 @@ font-weight: bold;
         left: 300px;
         top:50%;
         transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .carousel .item5 .carousel-caption img{
@@ -471,7 +529,7 @@ font-weight: bold;
         bottom: 0px;
         left: 0px; 
         width: 100%;
-        max-width: 250px;
+        max-width: 274px;
     }
 
     .carousel .item5 .slideimg{
@@ -487,13 +545,15 @@ font-weight: bold;
 
     .carousel .item5 button{
         border: none;
-        border-radius: 15px;
+        border-radius: 20px;
         font-size: 16px;
         padding: 3px 20px;
-        width: 150px;
+        width: 155px;
+        height: 42px;
         background-color: #2a67b5;
         color: white;
         margin-left: 15px;
+        cursor: pointer;
     }
 
     .carousel .item5 button:hover{
@@ -516,6 +576,167 @@ font-weight: bold;
         font-weight: 500;
     }
 
+
+    /* isccm-connect */
+
+    .isccm-connect{
+        background-color: #2a67b5;
+        padding: 45px 0px 30px 0px;
+
+    }
+
+    .isccm-connect span{
+        font-size: 23px;
+        color: white;
+        margin-left: 14px;
+    }
+
+    .isccm-connect img{
+        width: 35px;
+        height: 35px;
+    }
+
+    .isccm-connect input{
+        width: 100%;
+        max-width: 244px;
+        margin-left: 33px;
+        padding: 13px 33px 8px 16px;
+        border: none;
+        outline:none;
+        color: white;
+    }
+
+    .isccm-connect input:focus{
+     background-color: #ff0000;
+    }
+
+    .isccm-connect input:focus::placeholder{
+        color: white;
+    }
+
+    .isccm-connect button{
+        width: 113px;
+        height: 38px;
+        background-color: #d99a3d;
+        border-radius: 20px;
+        font-size: 16px;
+        margin-left: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .isccm-connect button:hover{
+        background-color: #ff0000;
+    }
+
+    .About{
+      background-image: url("images/about bg.png"); 
+      background-repeat: no-repeat;
+      height: 627px;
+    }
+
+    .About .left{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 627px;
+        background-image: url("images/aboutleft bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .About .left h2{
+        font-size: 30px;
+        padding: 0px!important;
+        margin: 0px!important;
+    }
+
+    .About .left span{
+        font-size: 20px;
+        padding: 0px!important;
+    }
+
+    .About .left p{
+        margin-top: 40px;
+        font-size: 18px;
+        color: #535252;
+    }
+
+    .About .left button{
+        width: 155px;
+        background-color: #ffb500;
+        font-size: 15px;
+        border: none;
+        border-radius: 20px;
+        padding: 13px 44px 15px 36px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .About .left button:hover{
+        background-color: #4b0027;
+    }
+
+    .About .right{
+        height: 627px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    .About .right>div{
+        margin-bottom: 10px;
+    }
+    
+    .About .right span{
+        display: block;
+    }
+
+    .About .right .roundshape{
+        width: 123px;
+        height: 123px;
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+    }
+
+    .About .right .roundshape{
+        max-width: 280px;
+    }
+
+    .About .right div:nth-child(1) .roundshape{
+        background-color: #2a67b5;
+    }
+
+    .About .right div:nth-child(2) .roundshape{
+        background-color: #303c4b;
+    }
+
+    .About .right div:nth-child(3) .roundshape{
+        background-color: #66788d;
+    }
+
+    .About .right div:nth-child(4) .roundshape{
+        background-color: #0972f5;
+    }
+
+    .About .right div div:nth-child(2) span{
+        font-size: 18px;
+        color: #535252;
+    }
+
+
+    .About .right a{
+        color: #b43d40;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 22px;
+    }
 @media (min-width:992px){
     .container{
     width:970px ;
@@ -549,7 +770,6 @@ font-weight: bold;
         flex-direction: column;
         background-color: #2a67b5;
         transform: translateX(0%);
-        box-shadow: 2px 5px 5px 0px #a39b90;
         width: 300px;
         overflow-y: scroll;
         transform: translateX(-100%);
@@ -626,31 +846,26 @@ font-weight: bold;
         margin-left: 0px;
     }
 
-    .sliderinneritem1 .left-item{
-        width: 100%;
-        margin: 0px 15px;
-        color: #ffffff;
-        background-color: rgba(0,0,0,0.8);
-        top:0px;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin: 0px;
-        padding: 0px 15px 0px 100px;
-    }
 
-    .sliderinneritem1 .right-item{
-        width: 100%;
+    /* .sliderinneritem1 .right-item{
+        left: 60%;
+        display: none;
+       
+    } */
+
+     .carousel .item2 .carousel-caption{
+         left: 0px!important;
      }
+
+     .carousel .item3 .carousel-caption{
+        left: 0px;
+    }
 
      .carousel .item5 .carousel-caption .caption{
          left: 0px;
-         background-color: rgba(0,0,0,0.8);
          width: 100%;
          height: 100%;
+         padding-left: 100px;
      }
 
      .carousel .item5 .carousel-caption{
@@ -661,20 +876,64 @@ font-weight: bold;
          align-items: center;
          flex-direction: column;
          bottom: 0px;
+         overflow: hidden;
+         margin: 0px;
+         max-width: 1000px;
      }
+
+     
+}
+
+@media(max-width:992px){
+    .isccm-connectinner{
+        flex-direction: column;
+    }
+
+    .isccm-connect input{
+        width: 100%;
+        max-width:2000px;
+        margin: 10px 0px;
+    }
+
+
+    .About{
+        height: auto;
+    }
+
+    .About .left{
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .About .right{
+        height: auto;
+        margin-top: 30px;
+    }
+
+
+
 }
 
 @media(max-width:768px){
 
+    header .topside{
+        width: 70%;
+    }
     .carousel-item{
         max-height: 100vh;
     }
    
 
 
-     .sliderinneritem1 .right-item img{
-         object-fit: cover;
+    
+
+     .carousel .item4 button{
+         bottom: 250px;
      }
+
+     .carousel .item5 .carousel-caption img{
+        left: -100%;
+    }
 
 
 }
@@ -683,7 +942,7 @@ font-weight: bold;
 
 @media(max-width:675px){
     header .topside{
-        width: 80%;
+        width: 75%;
     }
 
 
@@ -717,6 +976,10 @@ font-weight: bold;
         transition: 0.5s;
     }
 
+    .sliderinneritem1 .carousel-caption{
+       left: 15px;
+    }
+
     .carousel .item3 .carousel-caption{
         width: 100%;
         margin: 0px;
@@ -735,6 +998,23 @@ font-weight: bold;
 
     .sliderinneritem1 .left-item{
         padding: 0px 15px 0px 15px;
+    }
+
+    .carousel .item5 .carousel-caption .caption{
+        padding-left: 15px;
+    }
+
+    
+    .About .right>div{
+        flex-direction: column;
+
+        
+    }
+
+    .About .right div div:nth-child(2){
+        max-width:1000px;
+        text-align: center;
+        margin-left: 0px !important;
     }
     
 }
