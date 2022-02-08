@@ -21,6 +21,7 @@
 html{
     padding: 0px;
     margin: 0px;
+    overflow-x: hidden;
 
 }
 
@@ -80,7 +81,7 @@ header .topside input{
 
 header .topside input::placeholder{
     color: white;
-    padding-left: 12px;
+    padding: 5px 12px;
     font-weight: 200;
     font-size: 14px;
     font-family: 'Poppins-Regular', sans-serif;
@@ -124,7 +125,7 @@ header .navleft .logo{
 
 header nav img{
     width: 100%;
-    max-width: 100px;
+    max-width: 60px;
 }
 
 header .navright{
@@ -244,7 +245,7 @@ header .homelogin{
 }
 
 .slider img{
-    max-height: 500px;
+    min-height: 120px;
 }
 
 
@@ -260,7 +261,8 @@ header .homelogin{
         font-size: 23px;
         color: white;
         margin-left: 14px;
-        font-family: 'Poppins-SemiBold', sans-serif;
+        font-family: 'Poppins', sans-serif;
+
     }
 
     .isccm-connect img{
@@ -287,7 +289,7 @@ header .homelogin{
         margin-left: 20px;
         border: none;
         cursor: pointer;
-        font-family: 'Poppins-SemiBold', sans-serif;
+        font-family: 'Poppins-Regular', sans-serif;
     }
 
     .isccm-connect button:hover{
@@ -516,6 +518,229 @@ header .homelogin{
             font-family: 'Poppins-Regular', sans-serif;
         }
 
+        /* style gallery*/
+
+        .gallery{
+            padding: 50px 0px;
+        }
+
+        .gallery .galleryitems{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 20px;
+        }
+
+        .gallery .card{
+            padding: 0px !important;
+            border: 1px solid #c5c5c5;
+            box-shadow: 0px 5px 5px 0px #979797;
+            margin: auto;
+
+        }
+
+        .gallery .cardtop{
+            position: relative;
+        }
+
+        .gallery .card .icon{
+            width: 66px;
+            height: 66px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+
+        }
+
+        .gallery h2{
+            font-size: 30px;
+            font-family: 'Poppins-Regular', sans-serif;
+            font-weight: bold;
+
+        }
+
+        .gallery p{
+            font-family: 'Poppins-Regular', sans-serif;
+            font-size: 18px;
+            color: #5a5858;
+        }
+
+        .gallery h5{
+            font-size: 13px;
+            font-weight: bold;
+            font-family: 'Poppins-Regular', sans-serif;
+
+        }
+
+        .gallery span{
+            font-size: 13px;
+            font-family: 'Poppins-Regular', sans-serif;
+            color: #5a5959;
+            display: block;
+
+        }
+
+        .gallery button{
+            width: 100px;
+            border-radius: 20px;
+            border: none;
+            background-color: #ffb500;
+            font-size: 13px;
+            font-family: 'Poppins-Regular', sans-serif;
+            padding: 8px 10px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .gallery button:hover{
+            opacity: 0.5;
+        }
+
+        /* style initiatives */
+        .initiatives {
+            font-family: 'Poppins-Regular', sans-serif; 
+            background-color:#efefef;
+            padding: 50px 15px;
+        }
+
+        .initiatives h2{
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .initiatives p{
+            color: #595858;
+            font-size: 18px;
+        }
+        
+        .initiatives h5{
+            text-align: center;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+
+        .initiatives span{
+            padding: 20px 0px;
+        }
+
+        .initiatives a{
+            text-decoration: none;
+            color: #b43d40;
+            font-size: 18px;
+            position: absolute;
+            bottom: 10px;
+        }
+
+        .initiatives i{
+            color: black;
+        }
+
+
+        .initiatives img{
+            width: 100%;
+            max-width: 150px;
+            margin: auto;
+        }
+
+        .initiatives .card{
+            border: 1px solid #9e9c9d;
+            padding-top: 20px;
+        }
+
+
+    /* style notice */
+
+    .notice{
+        font-family: 'Poppins-Regular', sans-serif; 
+        padding: 50px 15px;
+    }
+
+    .notice h2{
+       font-size: 30px;
+       font-weight: bold;
+    }
+
+    .notice h4{
+        font-size: 24px;
+        color: #616060;
+    }
+
+    .notice .media .left{
+        position: relative;
+    }
+    .notice .media .left img{
+        height: 53px;
+    }
+    .notice .date{
+        position: absolute;
+        left: 15px;
+        top:16px;
+        bottom: 0px;
+    }
+    .notice .date span{
+        display: block;
+        padding: 0px !important;
+        margin: 0px !important;
+        font-size: 12px;
+        text-align: center;
+        font-family: 'Poppins-Regular', sans-serif;
+    }
+
+    .notice .date span:nth-child(1){
+     color: #89314d;
+     font-weight: bolder;
+    }
+    
+
+    .notice a{
+        text-decoration: none;
+        color: #4d0027;
+        font-weight: bold;
+    }
+
+    .notice .media{
+        padding: 20px 0px;
+    }
+
+    .notice .container .row{
+        padding-top: 20px;
+    }
+
+  
+
+
+    /* style footer */
+
+    .copyright{
+        text-align: center;
+        font-size: 12px;
+        background-color: #303c4b;
+        color: #fefefe;
+        font-family: 'Poppins-Regular', sans-serif;
+        padding: 30px 0px;
+        box-shadow: 0px 5px 5px #252525;
+    }
+
+    footer{
+        background-color: #404040;
+        color: white;
+        font-family: 'Poppins-Regular', sans-serif;
+    }
+    footer li{
+        list-style: none;
+    }
+
+    footer a{
+        text-decoration: none !important;
+        color: white;
+    }
+    footer h5{
+        font-weight: bold;
+    }
+
+    footer .container{
+        padding: 50px 0px 30px 0px !important;
+    }
 
 @media (min-width:992px){
     .container{
@@ -526,7 +751,22 @@ header .homelogin{
     .container{
     width:1170px ;
     }
+
+    .initiatives .row{
+        display:grid !important;
+        grid-template-columns: auto auto auto auto auto;
+        grid-gap: 10px;
+        }
 }
+
+@media (max-width:1200px){
+    .initiatives .row{
+        display:grid !important;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+        }
+}
+
 @media(max-width:1300px){
     .sliderinneritem1 .right-item{
         right: -45%;
@@ -701,7 +941,14 @@ header .homelogin{
         padding-top:10px;
     }
 
+    .gallery .galleryitems{
+        grid-template-columns: auto auto;
+    }
 
+    .initiatives .row{
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+        }
 
 
 
@@ -738,7 +985,18 @@ header .homelogin{
         right: -800px;
     }
 
+    .About .right>div{
+        flex-direction: column;
 
+        
+    }
+
+    .About .right div div:nth-child(2){
+        max-width:1000px;
+        text-align: center;
+        margin-left: 0px !important;
+    }
+    
 
     .eventdateinner{
         display: flex;
@@ -750,6 +1008,20 @@ header .homelogin{
 
     .events h4{
         padding-top: 10px;
+    }
+
+    .gallery .galleryitems{
+        grid-template-columns: auto;
+    }
+
+    .initiatives .row{
+        grid-template-columns: auto;
+        }
+}
+
+@media(max-width:992px) and (min-width:578px){
+    nav{
+       max-width:1000px !important;
     }
 }
 
@@ -774,6 +1046,8 @@ header .homelogin{
 
     header .homelogin{
         display: block;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
     }
 
 
@@ -818,18 +1092,5 @@ header .homelogin{
     .carousel .item5 .carousel-caption .caption{
         padding-left: 15px;
     }
-
-    .About .right>div{
-        flex-direction: column;
-
-        
-    }
-
-    .About .right div div:nth-child(2){
-        max-width:1000px;
-        text-align: center;
-        margin-left: 0px !important;
-    }
-    
     
 }
