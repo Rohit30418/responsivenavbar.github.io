@@ -92,14 +92,17 @@ header .topside ul{
 header .topside ul li{
     list-style: none;
     margin-left: 13px;
-    color:white;
-    cursor: pointer;
     height: 100%;
     font-size: 14px;
     font-family: 'MYRIADPRO-REGULAR', sans-serif;
 
 }
 
+header .topside ul li a{
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+}
 /* style navbar */
 header nav{
      display: flex;
@@ -143,14 +146,12 @@ header .menu li{
     cursor: pointer;
     font-size: 18px;
     font-family: 'Poppins-Regular', sans-serif;
-    font-weight: 500;
+    font-weight:normal !important
 }
 
 header .menu  li a{
     text-decoration: none;
     color: black;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-weight: 500;
 }
 
 header .menu li a:hover{
@@ -218,6 +219,7 @@ header .homelogin{
 
 header .homelogin li{
     font-family: 'Poppins-Regular', sans-serif;
+    font-size: 18px;
     font-weight: normal !important;
 }
 
@@ -277,6 +279,7 @@ header .homelogin li{
      top:72% !important;
      bottom: auto !important;
      padding: 0px!important;
+     right: 10%;
 }
 
 .carousel .carousel-item:nth-child(1) .carousel-caption button{
@@ -345,7 +348,7 @@ header .homelogin li{
 
 .carousel .carousel-item:nth-child(4) .carousel-caption button{
     position: absolute;
-    bottom: 5px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -726,7 +729,7 @@ header .homelogin li{
             font-size: 13px;
             font-family: 'Poppins-Regular', sans-serif;
             padding: 8px 10px;
-            margin-top: 15px;
+            margin-top: 10px;
             cursor: pointer;
         }
 
@@ -758,15 +761,13 @@ header .homelogin li{
         }
 
         .initiatives span{
-            padding: 20px 0px;
+            padding: 10px 0px;
         }
 
         .initiatives a{
             text-decoration: none;
             color: #b43d40;
             font-size: 18px;
-            position: absolute;
-            bottom: 10px;
         }
 
         .initiatives i{
@@ -807,12 +808,12 @@ header .homelogin li{
         position: relative;
     }
     .notice .media .left img{
-        height: 53px;
+        height: 55px;
     }
     .notice .date{
         position: absolute;
         left: 15px;
-        top:16px;
+        top:18px;
         bottom: 0px;
     }
     .notice .date span{
@@ -872,6 +873,11 @@ header .homelogin li{
         text-decoration: none !important;
         color: white;
     }
+
+    footer a:hover{
+        color: white;
+    }
+
     footer h5{
         font-weight: bold;
     }
@@ -1181,6 +1187,7 @@ header .homelogin li{
     font-size: 16px;
     min-width: 50px;
     max-width: 120px;
+    bottom: 5px;
    
 }
 
@@ -1271,6 +1278,11 @@ header .homelogin li{
        display: none;
     }
 
+    header .topside input::placeholder{
+        color: white;
+        padding: 0px 12px;
+    }
+
     header .homelogin{
         display: block;
     }
@@ -1330,7 +1342,7 @@ header .homelogin li{
     padding: 5px 20px;
     border-radius: 20px;
     border: none;
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
      width: 100%;
     min-width: 50px;
@@ -1339,30 +1351,33 @@ header .homelogin li{
 
 
 }
-
+.carousel .carousel-item:nth-child(1) .carousel-caption button:nth-child(2){
+    right: 0px !important;
+    position: absolute;
+}
 
 .carousel .carousel-item:nth-child(2) .carousel-caption button{
-    padding: 5px 20px;
+    padding: 5px 10px;
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 12px;
     background-color: #d99a3d;
     min-width: 50px;
-    max-width: 120px; 
+    max-width: 130px; 
 }
 
 .carousel .carousel-item:nth-child(3) .carousel-caption button{
     position: absolute;
     top: 68.5%;
     left: 9%;
-    padding: 5px 20px;
-    font-size: 14px;
+    padding: 5px 10px;
+    font-size: 12px;
     max-width: 120px;
    
 }
 
 .carousel .carousel-item:nth-child(4) .carousel-caption button{
     padding: 5px 20px;
-    font-size: 14px;
+    font-size: 12px;
     min-width: 50px;
     max-width: 110px;
    
@@ -1371,7 +1386,7 @@ header .homelogin li{
 .carousel .carousel-item:nth-child(5) .carousel-caption button{
     padding: 5px 20px;
     border: none;
-    font-size: 14px;
+    font-size: 12px;
     min-width: 50px;
     max-width: 110px;
    
@@ -1383,5 +1398,6 @@ header .homelogin li{
     .carousel .carousel-item:nth-child(1) .carousel-caption{ 
         top: 60% !important;
         left: 5%;
+        right: 5%;
     }
 }
