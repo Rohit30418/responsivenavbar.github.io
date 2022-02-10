@@ -8,22 +8,17 @@
 
 
 
-.carousel-control-next-icon, .carousel-control-prev-icon{
-    background-color: #2a67b5;
-    width: 20px;
-    height: 20px;
-    color: white;
-    border-radius: 50%;
-    padding: 10px !important;
-    top: 0px;
-} 
-
 html{
     padding: 0px;
     margin: 0px;
     overflow-x: hidden;
 
 }
+
+h2{
+    margin-top: 0px !important;
+}
+
 
 body{
     overflow-x: hidden;
@@ -33,7 +28,7 @@ body{
     width: 100%;
 }
 
-/* styling header */
+/* style header */
 header{
     width: 100%;
     height: 100px;
@@ -87,11 +82,11 @@ header .topside input::placeholder{
     font-family: 'Poppins-Regular', sans-serif;
 }
 
+
 header .topside ul{
     display:flex;
     align-items: center !important;
-    margin-bottom: 0px!important;
-    
+    margin-bottom: 0px!important;   
 }
 
 header .topside ul li{
@@ -104,7 +99,8 @@ header .topside ul li{
     font-family: 'MYRIADPRO-REGULAR', sans-serif;
 
 }
-/* styling navbar */
+
+/* style navbar */
 header nav{
      display: flex;
      height: 100%;
@@ -113,13 +109,6 @@ header nav{
 
 header .navleft .logo{
     text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-weight: bold;
-    padding-top:4px;
 }
 
 
@@ -141,11 +130,13 @@ header .menu{
     transform: translateX(-50%);
     display: flex;
     margin-bottom: 0px!important;
+    width: 100%;
+    max-width: 638px;
 }
 
 header .menu li{
     list-style: none;
-    margin: 0px 10px;
+    margin: 0px 20px;
     padding-bottom: 5px;
     font-family: 'poppins';
     color: black;
@@ -166,7 +157,7 @@ header .menu li a:hover{
     color: #2a67b5;
 }
 
-/* styling dropdown */
+/* style dropdown */
 
 header .menu .dropdown{
     position: absolute;
@@ -224,6 +215,12 @@ header .menu .dropdown ul span{
 header .homelogin{
     display: none;
 }
+
+header .homelogin li{
+    font-family: 'Poppins-Regular', sans-serif;
+    font-weight: normal !important;
+}
+
 /* style bar */
 .fa-bars{
     position: absolute;
@@ -244,16 +241,153 @@ header .homelogin{
     padding-top:100px;
 }
 
-.slider img{
-    min-height: 120px;
+
+
+.carousel .carousel-caption{
+    text-align: start;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    font-family: 'Poppins-Regular', sans-serif;
+    position: absolute;
 }
 
+.carousel-control-prev,.carousel-control-next{
+    width: 50px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1 !important;
+}
 
-    /* isccm-connect */
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: #2a67b5;
+    width: 20px;
+    height: 20px;
+    color: white;
+    border-radius: 50%;
+    padding: 10px !important;
+    top: 0px;
+} 
+
+ .carousel .carousel-item:nth-child(1) .carousel-caption{ 
+     left: 10%;
+     top:72% !important;
+     bottom: auto !important;
+     padding: 0px!important;
+}
+
+.carousel .carousel-item:nth-child(1) .carousel-caption button{
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+     width: 100%;
+    min-width: 50px;
+    max-width: 150px;
+
+
+}
+
+.carousel .carousel-item:nth-child(1) .carousel-caption button:nth-child(1){
+  background-color: #b43d40;
+  font-weight: bold;
+  color: white;
+
+   
+}
+
+.carousel .carousel-item:nth-child(1) .carousel-caption button:nth-child(2){
+    background-color: #b43d40;
+    font-weight: bold;
+    color: white;
+    margin-left: 5px;
+    
+     
+  }
+
+.carousel .carousel-item:nth-child(2) .carousel-caption button{
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #d99a3d;
+    width: 100%;
+    min-width: 50px;
+    max-width: 170px;
+    font-weight: bold;
+   
+}
+
+.carousel .carousel-item:nth-child(3) .carousel-caption button{
+    position: absolute;
+    top: 68.5%;
+    left: 9%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #d99a3d;
+    width: 100%;
+    min-width: 150px;
+    max-width: 170px;
+    font-weight: bold;
+   
+}
+
+.carousel .carousel-item:nth-child(4) .carousel-caption button{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #d99a3d;
+    width: 100%;
+    min-width: 50px;
+    max-width: 170px;
+    font-weight: bold;
+   
+}
+
+.carousel .carousel-item:nth-child(5) .carousel-caption button{
+    position: absolute;
+    top: 65%;
+    left: 37%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #0972f5;
+    width: 100%;
+    min-width: 50px;
+    max-width: 170px;
+    color: white;
+    font-weight: bold;
+   
+} 
+
+.carousel button:hover{
+    opacity: 0.5;
+}
+
+    /* style isccm-connect */
 
     .isccm-connect{
         background-color: #2a67b5;
-        padding: 50px 0px 50px 0px;
+        padding: 50px 0px ;
 
     }
 
@@ -510,12 +644,15 @@ header .homelogin{
         .events h4{
             font-family: 'Poppins-Regular', sans-serif;
             font-size: 18px;
+            padding-bottom: 5px !important;
+            margin: 0px !important;
         }
 
         .events span{
             color: #b43d40;
             font-size: 18px;
             font-family: 'Poppins-Regular', sans-serif;
+            
         }
 
         /* style gallery*/
@@ -528,6 +665,7 @@ header .homelogin{
             display: grid;
             grid-template-columns: auto auto auto;
             grid-gap: 20px;
+            padding-top: 20px;
         }
 
         .gallery .card{
@@ -600,7 +738,7 @@ header .homelogin{
         .initiatives {
             font-family: 'Poppins-Regular', sans-serif; 
             background-color:#efefef;
-            padding: 50px 15px;
+            padding: 50px 15px 50px 15px;
         }
 
         .initiatives h2{
@@ -739,8 +877,21 @@ header .homelogin{
     }
 
     footer .container{
-        padding: 50px 0px 30px 0px !important;
+        padding: 50px 0px 25px 0px !important;
     }
+    
+    footer .footerinner{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0px 15px;
+    }
+
+     footer .footerinner div:nth-child(2){
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    } 
+
 
 @media (min-width:992px){
     .container{
@@ -756,6 +907,7 @@ header .homelogin{
         display:grid !important;
         grid-template-columns: auto auto auto auto auto;
         grid-gap: 10px;
+        padding-top: 20px;
         }
 }
 
@@ -765,6 +917,10 @@ header .homelogin{
         grid-template-columns: auto auto auto;
         grid-gap: 20px;
         }
+
+        header .topside{
+            width: 50%;
+        }
 }
 
 @media(max-width:1300px){
@@ -772,17 +928,61 @@ header .homelogin{
         right: -45%;
     }
 }
-@media(max-width:1010px){
-    header .fa-bars{
-        display: block;
-    }
+@media(max-width:992px){
+
 
     header .topside{
         width: 60%;
     }
+    .isccm-connectinner{
+        flex-direction: column;
+    }
+
+    .isccm-connect input{
+        width: 100%;
+        max-width:2000px;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .isccm-connect button{
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+
+    .About{
+        height: auto;
+        background-size: cover;
+    }
+
+    .About .left{
+        height: auto;
+    }
+
+    .About .right{
+        height: auto;
+        padding-top: 50px;
+    }
+
+    .About .right span{
+        padding-top:10px;
+    }
+
+    .gallery .galleryitems{
+        grid-template-columns: auto auto;
+    }
+
+    .initiatives .row{
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+        }
+    header .fa-bars{
+        display: block;
+    }
+
     header .topside .topsideinner{
         margin-left: auto;
-        justify-content: flex-end;
         padding-right: 20px;
     }
     nav .menu{
@@ -793,13 +993,18 @@ header .homelogin{
         flex-direction: column;
         background-color: #2a67b5;
         transform: translateX(0%);
-        width: 300px;
+        width: 100vw;
         overflow-y: scroll;
         transform: translateX(-100%);
         transition: 0.5s;
         overflow-x: hidden;
+        max-width: 1000px;
     }
 
+
+    nav .menu .dropdown li{
+        margin: 0px 5px ;
+    }
 
     header .homelogin li{
         color: white;
@@ -815,6 +1020,7 @@ header .homelogin{
 
     nav .menu.show{
         transform: translateX(0%);
+        width: 100vw;
     }
 
     nav .menu::-webkit-scrollbar{
@@ -857,9 +1063,11 @@ header .homelogin{
         border: none;
     }
 
-    header .menu .dropdown ul li::before{
-        display: none;
+    header .menu .dropdown  {
+       width: 100%;
+       padding: 10px;
     }
+
 
     nav .menu .dropdown ul li a{
         color: black;
@@ -905,59 +1113,12 @@ header .homelogin{
      
 }
 
-@media(max-width:992px){
-    .isccm-connectinner{
-        flex-direction: column;
-    }
 
-    .isccm-connect input{
-        width: 100%;
-        max-width:2000px;
-        margin-top: 20px;
-        margin-left: 0px;
-    }
-
-    .isccm-connect button{
-        margin-left: 0px;
-        margin-top: 20px;
-    }
-
-
-    .About{
-        height: auto;
-        background-size: cover;
-    }
-
-    .About .left{
-        height: auto;
-    }
-
-    .About .right{
-        height: auto;
-        padding-top: 50px;
-    }
-
-    .About .right span{
-        padding-top:10px;
-    }
-
-    .gallery .galleryitems{
-        grid-template-columns: auto auto;
-    }
-
-    .initiatives .row{
-        grid-template-columns: auto auto;
-        grid-gap: 20px;
-        }
-
-
-
-}
 
 @media(max-width:768px){
 
     header .topside{
-        width: 70%;
+        width: 65%;
     }
 
     nav .menu{
@@ -969,10 +1130,6 @@ header .homelogin{
         max-height: 100vh;
     }
    
-
-
-    
-
      .carousel .item4 button{
          bottom: 250px;
      }
@@ -984,6 +1141,58 @@ header .homelogin{
     .sliderinneritem1 .right-item{
         right: -800px;
     }
+
+    
+    
+.carousel .carousel-item:nth-child(1) .carousel-caption button{
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+     width: 100%;
+    min-width: 50px;
+    max-width: 120px;
+
+
+}
+
+
+.carousel .carousel-item:nth-child(2) .carousel-caption button{
+    padding: 5px 20px;
+    margin-top: 5px;
+    font-size: 16px;
+    background-color: #d99a3d;
+    min-width: 50px;
+    max-width: 130px; 
+}
+
+.carousel .carousel-item:nth-child(3) .carousel-caption button{
+    position: absolute;
+    top: 68.5%;
+    left: 9%;
+    padding: 10px 20px;
+    font-size: 16px;
+   
+}
+
+.carousel .carousel-item:nth-child(4) .carousel-caption button{
+    padding: 5px 20px;
+    font-size: 16px;
+    min-width: 50px;
+    max-width: 120px;
+   
+}
+
+.carousel .carousel-item:nth-child(5) .carousel-caption button{
+    padding: 5px 20px;
+    border: none;
+    font-size: 16px;
+    min-width: 50px;
+    max-width: 120px;
+   
+} 
+
 
     .About .right>div{
         flex-direction: column;
@@ -1017,11 +1226,29 @@ header .homelogin{
     .initiatives .row{
         grid-template-columns: auto;
         }
+
+        footer .footerinner{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        footer .footerinner div:nth-child(2){
+            align-items: start;
+        }
+
 }
 
 @media(max-width:992px) and (min-width:578px){
     nav{
        max-width:1000px !important;
+    }
+
+    header .topside .topsideinner{
+        justify-content: flex-end;
+     }
+
+    footer .container{
+        max-width: 1000px !important;
     }
 }
 
@@ -1046,18 +1273,21 @@ header .homelogin{
 
     header .homelogin{
         display: block;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
     }
 
+    nav .menu.show{
+        width: 100vw;
+    }
 
     header .topside{
         right: -20px;
+        padding: 0px 15px;
     }
     header .topside input{
         width: 100%;
-        max-width: 300px;
-        margin:auto;
+       max-width: 1000px;
+        margin: 5px auto;
+        height: 100%;
     }
     
 
@@ -1091,6 +1321,67 @@ header .homelogin{
 
     .carousel .item5 .carousel-caption .caption{
         padding-left: 15px;
-    }
+    }  
     
+   
+
+
+.carousel .carousel-item:nth-child(1) .carousel-caption button{
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+     width: 100%;
+    min-width: 50px;
+    max-width: 110px;
+    
+
+
+}
+
+
+.carousel .carousel-item:nth-child(2) .carousel-caption button{
+    padding: 5px 20px;
+    margin-top: 5px;
+    font-size: 14px;
+    background-color: #d99a3d;
+    min-width: 50px;
+    max-width: 120px; 
+}
+
+.carousel .carousel-item:nth-child(3) .carousel-caption button{
+    position: absolute;
+    top: 68.5%;
+    left: 9%;
+    padding: 5px 20px;
+    font-size: 14px;
+    max-width: 120px;
+   
+}
+
+.carousel .carousel-item:nth-child(4) .carousel-caption button{
+    padding: 5px 20px;
+    font-size: 14px;
+    min-width: 50px;
+    max-width: 110px;
+   
+}
+
+.carousel .carousel-item:nth-child(5) .carousel-caption button{
+    padding: 5px 20px;
+    border: none;
+    font-size: 14px;
+    min-width: 50px;
+    max-width: 110px;
+   
+} 
+
+}
+
+@media(max-width:350px){
+    .carousel .carousel-item:nth-child(1) .carousel-caption{ 
+        top: 60% !important;
+        left: 5%;
+    }
 }
