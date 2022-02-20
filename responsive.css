@@ -183,16 +183,16 @@
             padding-right: 20px;
         }
         nav .menu{
-            position:absolute;
-            left:0px;
-            top:100px;
+            position: fixed;
+            right:0px;
+            top:0px;
             bottom:0px;
             width: 50vw;
             flex-direction: column;
             background-color: #2a67b5;
             overflow-y: scroll;
             transition: 0.5s;
-            transform: translateX(-100%);
+            transform: translateX(100%);
             overflow-x: hidden;
             max-width: 1000px;
             transition: 0.5s;
