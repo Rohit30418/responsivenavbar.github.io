@@ -1,30 +1,30 @@
 :root{
     /* colors */
-    --color1:#2a67b5;
+    --color1:#2a68b5;
     --color2:#ffb500;
     --color3:#b43d40;
-    /* section padding */
-    --gap:50px 0px;
 }
 
 /* website buttons */
-
 button , .btn{
     border: none;
     border-radius: 30px;
     cursor: pointer;
     outline: none;
+    white-space: nowrap;
 }
 
 /* yellow buttons */
 .btn-yellow{
     background-color: var(--color2);
     border: 1px solid transparent;
+    transition: 0.5s;
 }
+
 .btn-yellow:hover{
     background-color: white;
-    color:var(--color2);
-    border: 1px solid var(--color2);
+    color:var(--color2) !important;
+    border: 1px solid var(--color2) !important;
 }
 
 /* red button */
@@ -38,6 +38,11 @@ button , .btn{
     border: 1px solid var(--color3);
     background-color: white;
     color: var(--color3);
+}
+
+/* blue button */
+.btn-blue{
+    background-color: ;
 }
 
 /* section gap */
@@ -73,14 +78,15 @@ html{
     padding: 0px;
     margin: 0px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-h2{
+/* all h1 and h2 in website */
+h1,h2{
     margin-top: 0px !important;
     font-family: 'Poppins-Bold';
     font-size: 30px !important;
 }
-
 
 body{
     overflow-x: hidden;
@@ -94,13 +100,17 @@ body{
 header{
     width: 100%;
     height: 100px;
-    position: fixed;
+    position: relative;;
     background-color: white;
     z-index: 5;
+    transition:all 0.5s;
 }
 
 header.addshadow{
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0,0.5);
+    position: fixed;
+    width: 100%;
+    top:0px;
 }
 
 
@@ -117,8 +127,6 @@ header .topside{
 }
 
 header .topside .topsideinner{
-    display: flex;
-    align-items: center;
     transform: skewX(-30deg);
 }
 
@@ -126,27 +134,27 @@ header .topside .topsideinner{
 header .topside input{
     border: 2px solid white;
     border-radius: 15px;
-    background-color: transparent;
-    padding: 0px 5px;
-    color: white;
+    background-color:white;
+    padding: 0px 10px 0px 5px;
+    color: rgb(0, 0, 0);
     width: 100%;
-    max-width: 132px;
+    max-width: 150px;
     outline: none;
     font-family: 'Poppins-Regular';
     padding: 0px 0px 0px 12px;
 }
 
-
+header .topside input:focus+i{
+    display: none;
+}
 
 header .topside input::placeholder{
-    color: white;
+    color: #4c4c4c;
     font-family: 'Poppins-Regular';
 }
 
 
 header .topside ul{
-    display:flex;
-    align-items: center !important;
     margin-bottom: 0px!important;  
     padding: 0px !important;
 }
@@ -165,27 +173,15 @@ header .topside ul li a{
     font-family: 'Poppins-Regular'
 
 }
-/* style navbar */
-header nav{
-     display: flex;
-     height: 100%;
-     align-items: center;
-}
 
+/* style navbar */
 header .navleft .logo{
     text-decoration: none;
 }
 
-
 header nav img{
     width: 100%;
     max-width: 60px;
-}
-
-header .navright{
-    display: flex;
-    align-self: flex-end;
-    height: 100%;
 }
 
 header .menu{
@@ -193,7 +189,6 @@ header .menu{
     left: 50%;
     bottom: 0px;
     transform: translateX(-50%);
-    display: flex;
     margin-bottom: 0px!important;
     width: 100%;
     max-width: 638px;
@@ -201,7 +196,6 @@ header .menu{
 
 header .menu li{
     list-style: none;
-    margin: 0px 0px;
     padding: 10px 10px 12px 10px;
     font-family: 'poppins';
     color: black;
@@ -213,6 +207,7 @@ header .menu li{
 header .menu  li a{
     text-decoration: none;
     color: black;
+    transition: 0.5s;
 }
 
 header .menu li:hover a{
@@ -225,35 +220,6 @@ header .follow{
     transform: translateX(-50%);
     bottom: 12px;
 }
-
-/* style dropdown */
-header .menu .dropdown{
-    position: absolute;
-    top:45px;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid white;
-    padding:0px;
-    border-radius: 5px;
-    transition: 0.5s;
-    display: flex;
-    opacity:0;
-    transition:  opacity 0.5s;
-    height: 0px;
-    z-index: 0;
-}
-
-
-header .menu li:hover .dropdown{
-   height:auto;
-   overflow: visible;
-   opacity: 1;
-   z-index: 1;
-   padding: 10px;
-   border: 2px solid var(--color1);
-}
-
-
-
 
 header .menu .dropdown ul li{
     margin-top: 5px ;
@@ -291,9 +257,6 @@ header .menu .dropdown ul span{
     font-family: 'Poppins-SemiBold';
 }
 
-
-
-
 header .homelogin{
     display: none;
 }
@@ -302,6 +265,7 @@ header .homelogin li{
     font-family: 'Poppins-SemiBold';
     font-size: 18px;
 }
+
 
 /* style bar */
 
@@ -318,7 +282,7 @@ header .homelogin li{
   
    .bar span {
     background-color: var(--color1);
-    height: 4px;
+    height: 3px;
     width: 30px;
     position: absolute;
     left: 50%;
@@ -368,11 +332,10 @@ header .homelogin li{
     top: 50%;
   }
 
-/* style breadcrumbs */
 
+/* style breadcrumbs for other pages */
 .breadcrumb-cont{
     border-top: 1px solid #0972f5 !important;
-    margin-top: 100px;
     padding: 5px 0px;
     font-family: 'Poppins-Regular', sans-serif;
 }
@@ -420,9 +383,7 @@ header .homelogin li{
 }
 
 /* style slider */
-.slider{
-    padding-top: 100px;
-}
+
 .carousel .carousel-caption{
     text-align: start;
     height: auto;
@@ -434,8 +395,6 @@ header .homelogin li{
     font-family: 'Poppins-Regular';
     z-index: 1;
 }
-
-
 
 .carousel-control-prev,.carousel-control-next{
     width: 30px;
@@ -530,6 +489,7 @@ header .homelogin li{
 
     .isccm-connect{
         background-color:var(--color1);
+        box-shadow:0px 5px 5px 0px #6e6e6e;
     }
 
     .isccm-connect span{
@@ -549,7 +509,7 @@ header .homelogin li{
         width: 100%;
         max-width: 244px;
         margin-left: 33px;
-        padding: 8px 33px 8px 16px;
+        padding: 8px 0px 8px 16px;
         border: none;
         outline:none;
     }
@@ -559,15 +519,10 @@ header .homelogin li{
     }
 
     .isccm-connect button{
-        width: 113px;
-        height: 38px;
         font-size: 16px;
         margin-left: 20px;
         font-family: 'Poppins-Regular';
-    }
-
-    .isccm-connect button:hover{
-        opacity: 0.5;
+        padding: 5px 25px;
     }
 
     .About{
@@ -576,13 +531,9 @@ header .homelogin li{
     }
 
     .About .left{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
         background-image: url("images/aboutleft bg.png");
-        background-position: center;
+        background-position:center;
         background-repeat: no-repeat;
-        background-size: contain;
     }
 
 
@@ -598,11 +549,9 @@ header .homelogin li{
         font-size: 18px;
         color: #535252;
         font-family: 'Poppins-Regular';
-        max-width: 588px;
     }
 
     .About .left button{
-        width: 155px;
         font-size: 15px;
         padding: 13px 44px 15px 36px;
         margin-top: 10px;
@@ -610,14 +559,11 @@ header .homelogin li{
     }
 
     .About .right>div{
-        margin-bottom: 10px;
+        margin: 10px 0px;
     }
 
-    .About .right>div:nth-child(4){
-        margin-bottom: 0px;
-    }
     
-    .About .right span{
+    .About .right p{
         display: block;
     }
 
@@ -630,6 +576,10 @@ header .homelogin li{
         place-content: center;
         text-align: center;
         color: white;
+    }
+
+    .About .right>div:hover .roundshape{
+        background-color: white;
     }
 
     .About .right .roundshape{
@@ -647,29 +597,41 @@ header .homelogin li{
         padding: 0px !important;
     }
 
+    
     .About .right div:nth-child(1) .roundshape{
         background-color: #2a67b5;
+        transition: 0.5s;
+        border: 1px solid transparent;
     }
+
 
     .About .right div:nth-child(2) .roundshape{
         background-color: #303c4b;
+        transition: 0.5s;
+        border: 1px solid transparent;
     }
 
     .About .right div:nth-child(3) .roundshape{
         background-color: #66788d;
+        transition: 0.5s;
+        border: 1px solid transparent;
     }
+
 
     .About .right div:nth-child(4) .roundshape{
         background-color: #0972f5;
+        transition: 0.5s;
+        border: 1px solid transparent;
     }
 
-    .About .right div div:nth-child(2) span{
+    .About .right div div:nth-child(2) p{
         font-size: 18px;
         color: #535252;
+        margin-bottom: 0px !important;
     }
 
 
-    .About .right .roundshape+div span{
+    .About .right .roundshape+div p{
         font-family: 'Poppins-Regular';
         font-size: 18px;
     }
@@ -680,6 +642,7 @@ header .homelogin li{
         text-decoration: none;
         font-family: 'Poppins-Bold';;
         font-size: 22px;
+        transition: 0.5s;
     }
 
     .About .right a:hover{
@@ -687,7 +650,6 @@ header .homelogin li{
     }
 
     /* style events */
-
     .events .left{
         max-width: 797px;
     }
@@ -695,10 +657,10 @@ header .homelogin li{
         font-family: 'Poppins-Regular';
         font-size: 18px;
         color: #5a5858;
+        margin-bottom: 0px !important;
 }
 
     .events button{
-        width: 155px !important;
         font-size: 16px;
         padding: 13px 19px;
         font-family: 'Poppins-Bold';   
@@ -715,9 +677,9 @@ header .homelogin li{
     }
 
     .events .eventsimg div:nth-child(1){
-        -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1/3;
+                -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+        grid-column: 1/3;
       
     }
 
@@ -739,19 +701,18 @@ header .homelogin li{
             border: 1px solid #c8c8c8;
             box-shadow: 0px 2px 5px 0px #c8c8c8;
             margin-top: 20px;
-            padding: 20px 0px;
+            padding: 20px 50px;
             align-items: center;
         }
 
         .events .icon{
             background-color:#2a67b5;
-            width: 64px;
-            height: 64px;
+            padding: 15px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0px 50px;
+            margin-right: 50px;
         }
 
         .events h4{
@@ -776,15 +737,15 @@ header .homelogin li{
             grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
             grid-auto-rows: 1fr;
             grid-gap: 20px;
-            padding-top: 20px;
+            padding: 10px 0px;
         }
 
         .gallery .card{
             padding: 0px !important;
             border: 1px solid #c5c5c5;
             box-shadow: 0px 5px 5px 0px #979797;
+            transition: 0.5s;
         }
-
         .gallery .cardtop{
             position: relative;
         }
@@ -812,27 +773,33 @@ header .homelogin li{
 
         }
 
-        .gallery span{
+        .gallery h4{
+            font-family: 'Poppins-Regular';
+            font-size: 18px;
+            color: #5a5858;
+        }
+
+        .gallery .card p{
             font-size: 13px;
             font-family: 'Poppins-Regular';
             color: #5a5959;
             display: block;
+            margin-bottom: 0px !important;
 
         }
 
         .gallery button{
-            width: 100px;
             font-size: 13px;
             font-family: 'Poppins-Regular';
             padding: 8px 10px;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         /* style initiatives */
         .initiatives {
             font-family: 'Poppins-Regular'; 
             background-color:#efefef;
-            padding: 50px 15px 50px 15px;
+            padding: 50px 0px;
         }
 
         .initiatives .row{
@@ -842,7 +809,9 @@ header .homelogin li{
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             grid-auto-rows: 1fr;
             grid-gap: 20px;
-            padding-top: 20px;
+            padding: 10px 0px;
+            width: 100%;
+            margin: auto;
         }
 
 
@@ -859,9 +828,11 @@ header .homelogin li{
             padding-top: 10px;
         }
 
-        .initiatives span{
-            padding: 10px 0px;
+        .initiatives .card p{
+            padding:0px 0px 10px 0px;
             font-family: 'Poppins-Regular';
+            font-size: 16px;
+            margin-bottom: 0px !important;
         }
 
         .initiatives a{
@@ -869,6 +840,7 @@ header .homelogin li{
             color: #b43d40;
             font-size: 18px;
             font-family: 'Poppins-Regular';
+            margin-top: 60px;
         }
 
         .initiatives a:hover{
@@ -890,8 +862,6 @@ header .homelogin li{
             border: 1px solid #9e9c9d;
             padding-top: 20px;
         }
-
-
     /* style notice */
 
     .notice{
@@ -950,12 +920,7 @@ header .homelogin li{
         padding-top: 20px;
     }
 
-  
-
-
     /* style footer */
-
-
     footer{
         background-color: #404040;
         color: white;
@@ -1006,623 +971,16 @@ header .homelogin li{
         background-color: #0972f5;
         color: #fefefe;
         font-family: 'Poppins-Regular';
-        padding: 10px 0px;
+        padding: 20px 0px;
         box-shadow: 0px 5px 5px #252525;
     }
 
-
-    @media(min-width:992px){
-header .menu li{
-    font-family: 'Poppins-SemiBold';
-    overflow: hidden;
-    position: relative;
-}
-
-header .menu .dropdown{
-    position: absolute;
-    top:47px;
-    padding:0px;
-    border-radius: 5px;
-    transition: 0.5s;
-    display: flex;
-    opacity:0;
-    transition: opacity 0.5s;
-    height: 0px;
-    z-index: 1;
-}
-
-header .menu li:hover{
-    overflow: visible;
-}
-
-header .menu li:hover .dropdown{
-   height:auto !important;
-   overflow: visible;
-   opacity: 1;
-   z-index: 1;
-   padding: 20px;
-   border: 2px solid var(--color1);
-}
-
-
-header .menu li:nth-child(3):hover .dropdown{
-    left: -180px !important;
-    width: 725px;
-}
-
-
-header .menu .dropdown ul li{
-    margin-top: 5px ;
-    height: auto;
-    position: relative;
-    width: auto;
-    font-size: 14px;
-    padding: 0px!important;
-   
-}
-
-header .menu .dropdown ul span i{
-    background-color:var(--color1);
-    color: white;
-    padding:3px 5px;
-    margin-left: 5px;
-}
-
-header .menu li:nth-child(2) .dropdown{
-    width: 639px;
-    left: -100px !important;
-}
-
-header .menu li:nth-child(4) .dropdown{
-    width: 579px;
-    left: -200px !important;
-}
-
-header .menu li:nth-child(5) .dropdown{
-    width: 523px;
-    left: -200px !important;
-}
-    }
-
-@media (min-width:1200px){
-    .container{
-    width:1170px ;
-    }
-
-    .initiatives .row{
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: (minmax(290px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-auto-rows: 1fr;
-        grid-gap: 10px;
-        padding-top: 20px;
+    @keyframes slideheader{
+        0%{
+            top:-50px;
         }
-}
-
-@media (max-width:1200px){
-    .initiatives .row{
-        display:grid !important;
-        grid-template-columns: auto auto auto;
-        grid-gap: 20px;
+        100%{
+            top:0px;
         }
-
-        header .topside{
-            width: 50%;
-        }        
-}
-
-@media(max-width:1300px){
-    .sliderinneritem1 .right-item{
-        right: -45%;
-    }
-}
-@media(max-width:992px){
-
-    .About{
-        height: auto;
-        background-size: cover;
-    }
-    
-    .About .left{
-        height: auto;
-    }
-    
-    .About .right{
-        height: auto;
-        padding-top: 50px;
-    }
-    
-    .About .right span{
-        padding-top:10px;
-    }
-    
-    .menu-item{
-        position: relative;
-       
     }
 
-
-    .dropicon{
-        position: absolute;
-        top: 22px;
-        right: 30px;
-        background-color: brown;
-    }
-
-    .dropicon i{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: 0.5s;
-        /* right: 10px; */
-    }
-
-    header .menu li:hover .dropdown{
-        display: block;
-     }
-     
-
-    header .topside{
-        width: 60%;
-    }
-
-    .isccm-connectinner{
-        flex-direction: column;
-    }
-
-    .isccm-connect input{
-        width: 100%;
-        max-width:2000px;
-        margin-top: 20px;
-        margin-left: 0px;
-    }
-
-    .isccm-connect button{
-        margin-left: 0px;
-        margin-top: 20px;
-    }
-
-
-     .bar{
-        display: block;
-    }
-
-    header .topside .topsideinner{
-        margin-left: auto;
-        padding-right: 20px;
-    }
-    nav .menu{
-        position: fixed;
-        left:0px;
-        top:100px;
-        bottom: 0px;
-        width: 50vw;
-        flex-direction: column;
-        background-color: #2a67b5;
-        overflow-y: scroll;
-        transition: 0.5s;
-        transform: translateX(-100%);
-        overflow-x: hidden;
-        max-width: 1000px;
-        transition: 0.5s;
-        padding: 0px 10px;
-    }
-
-    nav .menu.show{
-        transform: translateX(0%);
-    }
-
-    nav .menu .dropdown li{
-       margin-top: 2.5px;
-       margin-bottom: 2.5px;
-    }
-
-    header .homelogin li{
-        color: white;
-        font-weight: bold;
-        cursor: pointer;
-        transition:all 0.5s;
-    }
-
-
-    header .topside input{
-    width: 200px;
-    }
-
-
-    nav .menu::-webkit-scrollbar{
-        visibility: hidden;
-        width: 5px;
-
-    }
-
-    nav .menu::-webkit-scrollbar-thumb{
-        border-radius: 15px;
-        background-color: rgb(187, 187, 187);
-    }
-
-    nav .menu .dropdown span{
-     color: black;
-    }
-
-    nav .menu li{
-        border-bottom: 1px solid white;
-        padding: 10px 0px;
-        cursor: pointer;
-        color: white;
-        transition: 0.5s;
-    }
-
-
-    nav .menu li a{
-        color: white;
-    }
-
-    nav .menu li:hover a{
-        color: #ffffff;
-    }
-
-    
-    header .menu .dropdown{
-        position:static;
-        transform: translateX(0%);
-        background-color: rgb(255, 255, 255);
-        border:none;
-        padding:0px;
-        border-radius: 5px;
-        width: 100%;
-        display: none;
-        flex-direction: column;
-    }
-
-    header .menu li:hover .dropdown{
-        display: block;
-     }
-
-
-header .menu li:nth-child(1):hover .dropdown,header .menu li:nth-child(2):hover .dropdown,header .menu li:nth-child(3):hover .dropdown,header .menu li:nth-child(4):hover .dropdown{
-    width: 100%;
-    padding: 10px;
-}
-
-
-    nav .menu .dropdown ul li a{
-        color: black;
-    }
-
-
-
-    .sliderinneritem1 .right-item{
-        right: -768px;
-    }
-
-     .carousel .item2 .carousel-caption{
-         left: 0px!important;
-     }
-
-     .carousel .item3 .carousel-caption{
-        left: 0px;
-    }
-
-     .carousel .item5 .carousel-caption .caption{
-         left: 0px;
-         width: 100%;
-         height: 100%;
-         padding-left: 100px;
-     }
-
-     .carousel .item5 .carousel-caption{
-         left: 0px;
-         right: 0px;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
-         bottom: 0px;
-         overflow: hidden;
-         margin: 0px;
-         max-width: 1000px;
-     }
-
-     .initiatives .row{
-        -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    }
-
-     
-}
-
-
-
-@media(max-width:768px){
-
-    header .topside{
-        width: 65%;
-    }
-
-    nav .menu{
-        width: 100vw;
-        transition: 0.5s;
-    }
-    
-    .carousel-item{
-        max-height: 100vh;
-    }
-   
-     .carousel .item4 button{
-         bottom: 250px;
-     }
-
-     .carousel .item5 .carousel-caption img{
-        left: -100%;
-    }
-
-    .sliderinneritem1 .right-item{
-        right: -800px;
-    }
-
-    
-    
-.carousel .carousel-item:nth-child(1) .carousel-caption button{
-    padding: 5px 20px;
-    border-radius: 20px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-     width: 100%;
-    min-width: 50px;
-    max-width: 120px;
-
-
-}
-
-
-.carousel .carousel-item:nth-child(2) .carousel-caption button{
-    padding: 5px 20px;
-    margin-top: 5px;
-    font-size: 16px;
-    background-color: #d99a3d;
-    min-width: 50px;
-    max-width: 130px; 
-}
-
-.carousel .carousel-item:nth-child(3) .carousel-caption button{
-    position: absolute;
-    top: 68.5%;
-    left: 9%;
-    padding: 10px 20px;
-    font-size: 16px;
-   
-}
-
-.carousel .carousel-item:nth-child(4) .carousel-caption button{
-    padding: 5px 20px;
-    font-size: 16px;
-    min-width: 50px;
-    max-width: 120px;
-    bottom: 5px;
-   
-}
-
-.carousel .carousel-item:nth-child(5) .carousel-caption button{
-    padding: 5px 20px;
-    border: none;
-    font-size: 16px;
-    min-width: 50px;
-    max-width: 120px;
-   
-} 
-
-
-    .eventdateinner{
-        display: flex;
-        justify-content:center ;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .events h4{
-        padding-top: 10px;
-    }
-
-    .gallery .galleryitems{
-        -ms-grid-columns: auto;
-      grid-template-columns: auto;
-    }
-
-    .initiatives .row{
-        -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    .noticeinner{
-        grid-template-columns:auto;
-    }
-
-        footer .footerinner{
-            display: grid;
-            grid-template-columns: 1fr;
-        }
-
-        footer .footerinner div:nth-child(2){
-            align-items: start;
-        }
-
-        footer .footerinner div:nth-child(2) h5{
-            margin-left:0px;
-        }
-
-}
-
-@media(max-width:992px) and (min-width:578px){
-    nav{
-       max-width:1000px !important;
-    }
-
-    header .topside .topsideinner{
-        justify-content: flex-end;
-     }
-
-    footer .container{
-        max-width: 1000px !important;
-    }
-}
-
-
-
-@media(max-width:675px){
-    header .topside{
-        width: 80%;
-    }
-
-
-}
-
-@media(max-width:578px){
-
-    header .topside{
-        padding: 5px 5px 10px 15px;
-    }
-    header .topside ul{
-       display: none;
-    }
-
-    header .topside input::placeholder{
-        color: white;
-        padding: 0px 12px;
-    }
-
-    header .homelogin{
-        display: block;
-    }
-
-    nav .menu.show{
-        width: 100vw;
-    }
-
-    header .topside{
-        right: -20px;
-        padding: 0px 15px;
-    }
-    header .topside input{
-        width: 100%;
-       max-width: 1000px;
-        margin: 5px auto;
-        height: 100%;
-    }
-    
-
-    .sliderinneritem1 .carousel-caption{
-       left: 15px;
-    }
-
-    .carousel .item3 .carousel-caption{
-        width: 100%;
-        margin: 0px;
-        max-width: auto;
-        left: 0px;
-        padding: 0px 15px;
-    }
-
-    .carousel .item2 .carousel-caption{
-        width: 100%;
-        margin: 0px;
-        max-width: auto;
-        left: 0px;
-        padding: 0px 15px;
-    }
-
-    .sliderinneritem1 .right-item{
-        right: -900px;
-    }
-
-    .sliderinneritem1 .left-item{
-        padding: 0px 15px 0px 15px;
-    }
-
-    .carousel .item5 .carousel-caption .caption{
-        padding-left: 15px;
-    }  
-    
-   
-
-
-.carousel .carousel-item:nth-child(1) .carousel-caption button{
-    padding: 5px 20px;
-    border-radius: 20px;
-    border: none;
-    font-size: 12px;
-    cursor: pointer;
-     width: 100%;
-    min-width: 50px;
-    max-width: 110px;
-    
-
-
-}
-.carousel .carousel-item:nth-child(1) .carousel-caption button:nth-child(2){
-    right: 0px !important;
-    position: absolute;
-}
-
-.carousel .carousel-item:nth-child(2) .carousel-caption button{
-    padding: 5px 10px;
-    margin-top: 5px;
-    font-size: 12px;
-    background-color: #d99a3d;
-    min-width: 50px;
-    max-width: 130px; 
-}
-
-.carousel .carousel-item:nth-child(3) .carousel-caption button{
-    position: absolute;
-    top: 68.5%;
-    left: 9%;
-    padding: 5px 10px;
-    font-size: 12px;
-    max-width: 120px;
-   
-}
-
-.carousel .carousel-item:nth-child(4) .carousel-caption button{
-    padding: 5px 20px;
-    font-size: 12px;
-    min-width: 50px;
-    max-width: 110px;
-    bottom: 2px;
-   
-}
-
-.carousel .carousel-item:nth-child(5) .carousel-caption button{
-    padding: 5px 20px;
-    border: none;
-    font-size: 12px;
-    min-width: 50px;
-    max-width: 110px;
-   
-} 
-
-.About .right>div{
-    flex-direction: column;
-
-    
-}
-
-.About .right div div:nth-child(2){
-    max-width:1000px;
-    text-align: center;
-    margin-left: 0px !important;
-}
-
-
-
-}
-
-@media(max-width:350px){
-    .carousel .carousel-item:nth-child(1) .carousel-caption{ 
-        top: 60% !important;
-        left: 5%;
-        right: 5%;
-    }
-}
