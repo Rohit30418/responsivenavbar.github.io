@@ -10,7 +10,7 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <!-- fontawesome -->
-     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- main style css -->
@@ -260,7 +260,7 @@
                           </div>
                     </li>
 
-                   
+                  
                 </ul>
 
                 <div class="topside">
@@ -286,8 +286,6 @@
             <span></span>
             <span></span>
         </div>
-
-
     </header>
     
 
@@ -457,7 +455,7 @@
                         <img src="images/events/eventsicon.png" alt="icon">
                     </div>
                     <div>
-                        <h4>Critical Care Medicine (CCM) is an evolving specialty overlapping multiple primary specialties. Recognizing the increasing need to consolidate the field and to promote awareness, continuing education and research in this field, the Indian Society of Critical Care Medicine (ISCCM) was Formed on 9th October 1993.</h4>
+                        <h4>Some information will come here. Some information will come here.Some information will come here.</h4>
                         <span>24 January 2022</span>
                     </div>
                 </div>
@@ -784,27 +782,6 @@
     <!-- script start -->
     <script src="jquery-3.6.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-        //toggle header shadow
-        let header=document.querySelector("header");
-        window.onscroll=()=>{
-            if (window.scrollY>110) {
-                header.classList.add("addshadow");
-                header.style.animation="slideheader 1s";
-            }else{
-                header.classList.remove("addshadow");
-                header.style.animation="none";
-            }
-        }
-
-        //toggle navbar
-        let bar=document.querySelector(".bar")
-        let menu=document.querySelector(".menu")
-        function togglenav() {
-            menu.classList.toggle("show");
-            bar.classList.toggle("show");
-        }
-    </script>
-    <!-- script end -->
+    <script src="main.js"></script>
 </body>
 </html>

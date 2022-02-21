@@ -40,10 +40,7 @@ button , .btn{
     color: var(--color3);
 }
 
-/* blue button */
-.btn-blue{
-    background-color: ;
-}
+
 
 /* section gap */
 .section-gap{
@@ -100,17 +97,14 @@ body{
 header{
     width: 100%;
     height: 100px;
-    position: relative;;
+    position: fixed;
     background-color: white;
     z-index: 5;
-    transition:all 0.5s;
+    top: 0px;
 }
 
 header.addshadow{
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0,0.5);
-    position: fixed;
-    width: 100%;
-    top:0px;
 }
 
 
@@ -338,6 +332,7 @@ header .homelogin li{
     border-top: 1px solid #0972f5 !important;
     padding: 5px 0px;
     font-family: 'Poppins-Regular', sans-serif;
+    margin-top: 100px;
 }
 
 .breadcrumb{
@@ -383,6 +378,9 @@ header .homelogin li{
 }
 
 /* style slider */
+.slider{
+    padding-top: 100px;
+}
 
 .carousel .carousel-caption{
     text-align: start;
@@ -426,10 +424,7 @@ header .homelogin li{
      width: 100%;
     min-width: 50px;
     max-width: 150px;
-
-
 }
-
 .carousel .carousel-item:nth-child(1) .carousel-caption button:nth-child(2){
     margin-left: 5px;     
   }
@@ -534,6 +529,7 @@ header .homelogin li{
         background-image: url("images/aboutleft bg.png");
         background-position:center;
         background-repeat: no-repeat;
+        background-size: contain;
     }
 
 
@@ -657,7 +653,6 @@ header .homelogin li{
         font-family: 'Poppins-Regular';
         font-size: 18px;
         color: #5a5858;
-        margin-bottom: 0px !important;
 }
 
     .events button{
@@ -672,7 +667,7 @@ header .homelogin li{
        -ms-grid-columns: auto auto auto;
         grid-template-columns: auto auto auto;
         grid-gap: 20px;
-        padding-top: 50px;
+        padding: 25px 0px;
 
     }
 
@@ -694,7 +689,7 @@ header .homelogin li{
 
     .eventdate{
       width: 100%;
-      margin-top: 50px;
+      margin-top:0px;
     }
    
         .events .eventdateinner{
@@ -973,14 +968,5 @@ header .homelogin li{
         font-family: 'Poppins-Regular';
         padding: 20px 0px;
         box-shadow: 0px 5px 5px #252525;
-    }
-
-    @keyframes slideheader{
-        0%{
-            top:-50px;
-        }
-        100%{
-            top:0px;
-        }
     }
 

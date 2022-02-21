@@ -2,10 +2,13 @@
  @media(min-width:992px){
 
     /* style header */
+
+
     header .menu li{
         font-family: 'Poppins-SemiBold';
         position: relative;
     }
+
     
     header .menu .dropdown{
         position: absolute;
@@ -116,6 +119,10 @@
     }
     @media(max-width:992px){
     
+        header .topside{
+            width: auto !important;
+            max-width: 490px;
+        }
         .About{
             height: auto;
             background-size: cover;
@@ -183,21 +190,21 @@
             padding-right: 20px;
         }
         nav .menu{
-            position: fixed;
-            right:0px;
-            top:0px;
-            bottom:0px;
+            position:fixed;
+            left:0px;
+            top:100px;
+            bottom: 0px;
             width: 50vw;
             flex-direction: column;
             background-color: #2a67b5;
             overflow-y: scroll;
             transition: 0.5s;
-            transform: translateX(100%);
+            transform: translateX(-100%);
             overflow-x: hidden;
             max-width: 1000px;
             transition: 0.5s;
             padding: 0px 10px;
-            z-index:-1;
+            z-index:5;
         }
     
         nav .menu.show{
@@ -327,9 +334,6 @@
     
     @media(max-width:768px){
     
-        header .topside{
-            width: 85%;
-        }
     
         nav .menu{
             width: 100vw;
@@ -461,7 +465,7 @@
         }
 
         header .topside{
-            width: 75%;
+            width: 75% !important;
         }
     
         header .homelogin{
@@ -469,7 +473,7 @@
         }
     
         nav .menu.show{
-            width: 80vw;
+            width: 100vw;
         }
     
         header .topside{
@@ -580,6 +584,10 @@
             align-items: center;
             flex-direction: column;
             text-align: center;
+        }
+
+        .events .icon{
+            margin-right: 0px;
         }
     }
     
